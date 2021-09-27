@@ -1,0 +1,62 @@
+### REGISTER
+POST http://localhost/api/register
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "toto",
+    "email": "toto@toto.fr",
+    "password": "totototo",
+    "password_confirmation": "totototo",
+    "deviceName": "Lfaure RestClient"
+}
+
+### LOGIN
+POST http://localhost/api/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "email": "toto@toto.fr",
+    "password": "to",
+    "deviceName": "REST Client"
+}
+
+### LOGOUT
+POST http://localhost/api/logout
+Authorization: Bearer 57|rDhxgd456HXuEKCQBBjfwm3YmmOOgd1JImDf0ibC
+
+### FORGOT PASSWORD
+POST http://localhost/api/forgot-password
+Content-Type: application/json
+Accept: application/json
+
+{
+    "email": "lfaure.dtrdev@gmail.com"
+}
+
+### RESET PASSWORD
+POST http://localhost/api/reset-password
+Content-Type: application/json
+Accept: application/json
+
+{
+    "token": "e46371e92e373f14bb26f168bc1ea6faf7d7fdd0b873355f4b58f744e8281bdf",
+    "email": "lfaure.dtrdev@gmail.com",
+    "password": "password",
+    "password_confirmation": "password"
+}
+
+### USER
+GET http://localhost/api/me
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1Nl8oBZDzxGyHV9icZoZZqmfCCDYf2rsA4vI6uXy
+
+### USERS
+GET http://localhost/api/users
+Authorization: Bearer 1|hZbst9rEY2IJBcj3qyQEUZuxvsrulxRr6TNd8LF3
+
+### DELETE USER
+DELETE http://localhost/api/users/18
+Authorization: Bearer 4N5mcSoTxffQdDQTReJhpJ7cU06VpuqgMPwmJXf5
